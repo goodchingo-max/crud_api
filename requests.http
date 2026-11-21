@@ -1,0 +1,26 @@
+@baseUrl = http://127.0.0.1:8000
+
+### 1. Ro'yxat
+GET {{baseUrl}}/items/
+
+### 2. Yaratish
+POST {{baseUrl}}/items/
+Content-Type: application/json
+
+{"name": "Olma", "price": 12000}
+
+### 3. Qisman yangilash
+PATCH {{baseUrl}}/items/1
+Content-Type: application/json
+
+{"price": 9000}
+
+### 4. Noto'g'ri ma'lumot (422 kutamiz)
+POST {{baseUrl}}/items/
+Content-Type: application/json
+
+{"name": "A", "price": -1}
+
+### 5. O'chirish
+DELETE {{baseUrl}}/items/1
+
